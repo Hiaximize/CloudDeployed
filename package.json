@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Hiaximize/CloudDeployed#readme",
   "dependencies": {
+    "clash-of-clans-api": "^0.6.3",
     "ejs": "^2.6.2",
     "express": "^4.17.1",
     "method-override": "^3.0.0",

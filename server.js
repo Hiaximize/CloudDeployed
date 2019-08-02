@@ -2,6 +2,7 @@
 //Dependencies
 //___________________
 const express = require('express');
+const exec = require('child_process');
 const methodOverride  = require('method-override');
 const mongoose = require ('mongoose');
 const app = express ();
@@ -51,8 +52,22 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //___________________
 //localhost:3000
 app.get('/' , (req, res) => {
-  res.send('Hello World!');
-});
+// try the api call here to ensure it works
+const accountSid = 'AC6b47f9f302e54cec7d8ee86f870a361f';
+const authToken = '5d910cc78c78707a4e24145c7065706f';
+const client = require('twilio')(accountSid, authToken);
+
+client.calls
+      .create({
+         url: 'http://demo.twilio.com/docs/voice.xml',
+         to: '+13522337206',
+         from: '+12028949849'
+       })
+      .then(call => console.log(call.sid));
+  });
+ 
+  
+
 
 //___________________
 //Listener
