@@ -61,12 +61,22 @@ app.get('/', (req, resp) => {
     resp.render('index.ejs');
     
 });
+
+
  
 app.post('/', (req, resp)=>{
     resp.send(req.body);
-
 })
 
+app.get('/call', (req,resp)=>{
+    const accountSid = req.body.sid;
+const authToken = req.body.auth_token;
+const client = require('twilio')(accountSid, authToken);
+
+client.messages(req.body.message)
+      .fetch()
+      .then(message => console.log(message.body));
+})
 
 
 //___________________
