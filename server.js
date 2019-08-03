@@ -53,8 +53,13 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 app.post('/', (error, req, resp)=>{
   if (error){console.log(error)} 
-  resp.redirect('/');
-  user.create(req.body, )
+  
+  user.create(req.body, (error, newData)=>{
+    console.log(error);
+    console.log(req.body);
+    console.log(newData);
+    resp.redirect('/');
+  })
 })
 
 
