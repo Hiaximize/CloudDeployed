@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 const PORT = process.env.PORT || 3000;
 
 // index page
-app.get('/index', (req, resp)=>{
+app.get('/', (req, resp)=>{
     resp.render('index.ejs');
 });
 
