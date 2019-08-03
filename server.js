@@ -71,14 +71,14 @@ app.post('/', (req, resp)=>{
         sid: req.body.sid,
     phoneNumber: req.body.phoneNumber,
     message: req.body.message}, (error, newData)=>{
-    if (error){
-        console.log(error);
-        } 
-    else {
-        resp.send(newData)
-    }
-    
-})
+        if (error){
+            console.log(error);
+            } 
+        else {
+            resp.send(newData)
+        }
+    });
+});
 
 app.get('/call', (req,resp)=>{
     const accountSid = req.body.sid;
