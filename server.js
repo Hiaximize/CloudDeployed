@@ -13,7 +13,7 @@ const db = mongoose.connection;
 // Allow use of Heroku's port or your own local port, depending on the environment
 const PORT = process.env.PORT || 3000;
 
-//___________________
+//___________________      
 //Database
 //___________________
 // How to connect to the database either via heroku or locally
@@ -51,20 +51,22 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 // Routes
 //___________________
 //localhost:3000
-app.get('/' , (req, res) => {
+app.get('/index' , (req, res) => {
 // try the api call here to ensure it works
-const accountSid = 'AC6b47f9f302e54cec7d8ee86f870a361f';
-const authToken = '5d910cc78c78707a4e24145c7065706f';
-const client = require('twilio')(accountSid, authToken);
+// const accountSid = '';
+// const authToken = '';
+// const client = require('twilio')(accountSid, authToken);
 
-client.calls
-      .create({
-         url: 'http://demo.twilio.com/docs/voice.xml',
-         to: '+13522337206',
-         from: '+12028949849'
-       })
-      .then(call => console.log(call.sid));
-  });
+// client.calls
+//       .create({
+//          url: 'http://demo.twilio.com/docs/voice.xml',
+//          to: outbount,
+//          from: youNumber
+//        })
+//       .then(call => console.log(call.sid));
+  
+    res.render('index.ejs')
+});
  
   
 
