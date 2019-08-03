@@ -58,7 +58,7 @@ app.post('/', (error, req, resp)=>{
     console.log(error);
     console.log(req.body);
     console.log(newData);
-    resp.redirect('/');
+    
   })
 })
 
