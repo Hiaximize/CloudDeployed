@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
-const character = require('./models/characterId.js');
+// const character = require('./models/characterId.js');
 
 
 ///////////////////Middleware/////////////////////////
@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 const PORT = process.env.PORT || 3000;
 
 // index page
-app.get('/', (req, resp)=>{
+app.get('/index', (req, resp)=>{
     resp.render('index.ejs');
 });
 
