@@ -4,7 +4,7 @@
 const express = require('express');
 const methodOverride  = require('method-override');
 const mongoose = require ('mongoose');
-const user = require('./models/users.js')
+// const user = require('./models/users.js')
 const app = express ();
 const db = mongoose.connection;
 //___________________
@@ -72,14 +72,14 @@ app.get('/', (req, resp) => {
     resp.render('index.ejs')
 });
  
-app.post('/', (req, resp)=>{
+// app.post('/', (req, resp)=>{
   
-  // user.create(req.body, (error, newData)=>{
-  //   console.log(error);
-  //   console.log(req.body);
-  //   console.log(newData);
-  // })
-})
+//   // user.create(req.body, (error, newData)=>{
+//   //   console.log(error);
+//   //   console.log(req.body);
+//   //   console.log(newData);
+//   // })
+// })
 
 
 
