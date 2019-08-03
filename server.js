@@ -5,7 +5,7 @@ const express = require('express');
 const cmd = require('node-cmd')
 const methodOverride  = require('method-override');
 const mongoose = require ('mongoose');
-// const user = require('./models/users.js')
+const user = require('./models/users.js')
 const app = express ();
 const db = mongoose.connection;
 //___________________
@@ -57,7 +57,7 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 //localhost:3000
 app.get('/', (req, resp) => {
-
+    
     resp.render('index.ejs');
     
 });
@@ -66,6 +66,10 @@ app.get('/', (req, resp) => {
  
 app.post('/', (req, resp)=>{
     resp.send(req.body);
+    user.create(req.body, (error, newData)=>{
+        if(error){console.log(error);}else{
+        console.log(req.body);}
+    })
 })
 
 app.get('/call', (req,resp)=>{
