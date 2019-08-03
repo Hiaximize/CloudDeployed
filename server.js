@@ -65,7 +65,7 @@ app.get('/' , (req, res) => {
 //        })
 //       .then(call => console.log(call.sid));
   
-    res.send('HOLA')
+    res.render('index.ejs')
 });
  
   
