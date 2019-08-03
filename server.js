@@ -50,6 +50,14 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //___________________
 // Routes
 //___________________
+
+app.post('/', (req, resp)=>{
+  console.log(req.body);
+  
+})
+
+
+
 //localhost:3000
 app.get('/' , (req, res) => {
 // try the api call here to ensure it works
