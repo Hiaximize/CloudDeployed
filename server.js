@@ -56,30 +56,12 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 //localhost:3000
 app.get('/', (req, resp) => {
-// try the api call here to ensure it works
-// const accountSid = '';
-// const authToken = '';
-// const client = require('twilio')(accountSid, authToken);
 
-// client.calls
-//       .create({
-//          url: 'http://demo.twilio.com/docs/voice.xml',
-//          to: outbount,
-//          from: youNumber
-//        })
-//       .then(call => console.log(call.sid));
   
     resp.render('index.ejs')
 });
  
-// app.post('/', (req, resp)=>{
-  
-//   // user.create(req.body, (error, newData)=>{
-//   //   console.log(error);
-//   //   console.log(req.body);
-//   //   console.log(newData);
-//   // })
-// })
+
 
 
 
