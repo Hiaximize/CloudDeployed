@@ -65,7 +65,6 @@ app.get('/', (req, resp) => {
 
  
 app.post('/', (req, resp)=>{
-    resp.send(req.body);
     user.create({auth_token: req.body.authToken,
         sid: req.body.sid,
     phoneNumber: req.body.phoneNumber,
@@ -73,6 +72,8 @@ app.post('/', (req, resp)=>{
         if(error){console.log(error);}else{
         console.log(req.body);}
     })
+    resp.send(newData);
+    
 })
 
 app.get('/call', (req,resp)=>{
