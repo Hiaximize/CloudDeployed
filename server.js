@@ -39,6 +39,6 @@ app.put('/:id', (req, resp)=>{
 
 ////////////////listen port///////////////////
 
-app.listen(port, ()=>{
-    console.log("Listening on port: ", 3000);
+app.listen(PORT, ()=>{
+    console.log("Listening on port: ", PORT);
 });
