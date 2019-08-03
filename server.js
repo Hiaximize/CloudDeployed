@@ -2,7 +2,6 @@
 //Dependencies
 //___________________
 const express = require('express');
-const exec = require('child_process');
 const methodOverride  = require('method-override');
 const mongoose = require ('mongoose');
 const app = express ();
