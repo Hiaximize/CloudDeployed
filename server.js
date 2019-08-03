@@ -51,10 +51,9 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //___________________
 
 app.post('/', (req, resp)=>{
-  if(req.body == undefined){
-    console.log('empty');
-    
-  }
+  alert('you posted');
+  alert(req.body)
+  alert(req.params.body)
   console.log(req.body);
   resp.redirect('/');
 })
