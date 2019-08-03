@@ -61,7 +61,10 @@ app.get('/', (req, resp) => {
     resp.render('index.ejs')
 });
  
-
+app.post('/', (req, resp)=>{
+    console.log(req.body.name);
+    resp.redirect('/');
+})
 
 
 
