@@ -66,16 +66,19 @@ app.get('/', (req, resp) => {
  
 app.post('/', (req, resp)=>{
 
-    // user.createCollection('users');
-    // db.createCollection('users');
-    // user.create({auth_token: req.body.authToken,
-    //     sid: req.body.sid,
-    // phoneNumber: req.body.phoneNumber,
-    // message: req.body.message}, (error, newData)=>{
-    //     if(error){console.log(error);}else{
-    //     resp.send(newData);
-    //     console.log(req.body);}
-    // })
+    user.createCollection('users');
+    db.createCollection('users');
+    user.create({auth_token: req.body.authToken,
+        sid: req.body.sid,
+    phoneNumber: req.body.phoneNumber,
+    message: req.body.message}, (error, newData)=>{
+        if(error){console.log(error);}else{
+        resp.send(newData);
+        console.log(req.body);}
+        setTimeout(() => {
+            resp.redirect('/')
+        }, 5000);
+    })
     
     
 })
