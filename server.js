@@ -63,7 +63,7 @@ app.post('/', (req, resp)=>{
 
 
 //localhost:3000
-app.get('/' , (req, res) => {
+app.get('/' , (req, resp) => {
 // try the api call here to ensure it works
 // const accountSid = '';
 // const authToken = '';
@@ -77,7 +77,7 @@ app.get('/' , (req, res) => {
 //        })
 //       .then(call => console.log(call.sid));
   
-    res.render('index.ejs')
+    resp.render('index.ejs')
 });
  
   
