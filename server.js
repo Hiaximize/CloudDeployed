@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 3000;
 //Database
 //___________________
 // How to connect to the database either via heroku or locally
-const MONGODB_URI = "mongodb+srv://test:0df8faa163ac497329ea2c3833f6eec9@firstcluster-xus9s.mongodb.net/test?retryWrites=true&w=majority";
+const MONGODB_URI = "mongodb+srv://test:0df8faa163ac497329ea2c3833f6eec9@firstcluster-xus9s.mongodb.net/Unit2-Project-Database.TEST?retryWrites=true&w=majority";
 
 // Fix Depreciation Warnings from Mongoose*
 // May or may not need these depending on your Mongoose version
@@ -66,20 +66,17 @@ app.get('/', (req, resp) => {
  
 app.post('/', (req, resp)=>{
 
-    user.createCollection('users');
-    db.createCollection('users');
+    
     user.create({auth_token: req.body.authToken,
         sid: req.body.sid,
     phoneNumber: req.body.phoneNumber,
     message: req.body.message}, (error, newData)=>{
-        if(error){console.log(error);}else{
-        resp.send(newData);
-        console.log(req.body);}
-        setTimeout(() => {
-            resp.redirect('/')
-        }, 5000);
-    })
-    
+    if (error){
+        console.log(error);
+        } 
+    else {
+        resp.send(newData)
+    }
     
 })
 
