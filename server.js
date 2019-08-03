@@ -65,6 +65,8 @@ app.get('/', (req, resp) => {
 
  
 app.post('/', (req, resp)=>{
+    user.createCollection('users');
+    db.createCollection('users');
     user.create({auth_token: req.body.authToken,
         sid: req.body.sid,
     phoneNumber: req.body.phoneNumber,
