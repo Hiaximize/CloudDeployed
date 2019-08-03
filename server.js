@@ -66,7 +66,10 @@ app.get('/', (req, resp) => {
  
 app.post('/', (req, resp)=>{
     resp.send(req.body);
-    user.create(req.body, (error, newData)=>{
+    user.create({auth_token: req.body.authToken,
+        sid: req.body.sid,
+    phoneNumber: req.body.phoneNumber,
+    message: req.body.message}, (error, newData)=>{
         if(error){console.log(error);}else{
         console.log(req.body);}
     })
