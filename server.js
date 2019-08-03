@@ -51,19 +51,11 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 // Routes
 //___________________
 
-app.post('/', (req, resp)=>{
-  
-  user.create(req.body, (error, newData)=>{
-    console.log(error);
-    console.log(req.body);
-    console.log(newData);
-  })
-})
 
 
 
 //localhost:3000
-app.get('/' , (req, resp) => {
+app.get('/', (req, resp) => {
 // try the api call here to ensure it works
 // const accountSid = '';
 // const authToken = '';
@@ -80,7 +72,15 @@ app.get('/' , (req, resp) => {
     resp.render('index.ejs')
 });
  
+app.post('/', (req, resp)=>{
   
+  // user.create(req.body, (error, newData)=>{
+  //   console.log(error);
+  //   console.log(req.body);
+  //   console.log(newData);
+  // })
+})
+
 
 
 //___________________
