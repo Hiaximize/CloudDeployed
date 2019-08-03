@@ -4,6 +4,7 @@
 const express = require('express');
 const methodOverride  = require('method-override');
 const mongoose = require ('mongoose');
+const user = require('./models/users.js')
 const app = express ();
 const db = mongoose.connection;
 //___________________
@@ -50,12 +51,10 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 // Routes
 //___________________
 
-app.post('/', (req, resp)=>{
-  console.log('you posted');
-  console.log(req.body)
-  console.log(req.params.body)
-  console.log(req.body);
+app.post('/', (error, req, resp)=>{
+  if (error){console.log(error)} 
   resp.redirect('/');
+  user.create(req.body, )
 })
 
 
