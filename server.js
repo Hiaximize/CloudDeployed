@@ -52,9 +52,11 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //___________________
 //localhost:3000
 app.get('/' , (req, resp) => {
-// try the api call here to ensure it works
+  
   resp.send('testing');
 });
+
+app.get('/')
  
   
 app.get('/call', (req, resp)=>{
