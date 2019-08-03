@@ -70,9 +70,10 @@ app.post('/', (req, resp)=>{
     phoneNumber: req.body.phoneNumber,
     message: req.body.message}, (error, newData)=>{
         if(error){console.log(error);}else{
+        resp.send(newData);
         console.log(req.body);}
     })
-    resp.send(newData);
+    
     
 })
 
