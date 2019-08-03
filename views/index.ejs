@@ -5,29 +5,6 @@
         <title></title>
     </head>
     <body>
-        <h1>Fruits Index Page</h1>
-        <ul>
-            <% for(let i = 0; i < fruits.length; i++){ %>
-                <li>
-                    The
-                    <a href="/fruits/<%=fruits[i].id; %>">
-                        <%=fruits[i].name; %>
-                    </a>
-                    is <%=fruits[i].color; %>.
-                    <% if(fruits[i].readyToEat === true) { %>
-                        It is ready to eat
-                    <% } else { %>
-                        It is not ready to eat
-                    <% } %>
-                    <form action="/fruits/<%=fruits[i].id%>?_method=DELETE" method="POST">
-                        <input type="submit" value="DELETE">
-                    </form>
-                    <a href="/fruits/<%=fruits[i].id%>/edit"><button>EDIT</button></a>
-                </li>
-            <% } %>
-        </ul>
-        <nav>
-            <a href="/fruits/new">Create a New Fruit</a>
-        </nav>
+      testing
     </body>
 </html>
