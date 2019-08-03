@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 3000;
 //Database
 //___________________
 // How to connect to the database either via heroku or locally
-const MONGODB_URI = "mongodb+srv://test:0df8faa163ac497329ea2c3833f6eec9@firstcluster-xus9s.mongodb.net/Unit2-Project-Database?retryWrites=true&w=majority";
+const MONGODB_URI = process.env.MONGODB_URI;
 
 // Fix Depreciation Warnings from Mongoose*
 // May or may not need these depending on your Mongoose version
@@ -69,25 +69,25 @@ app.post('/call', (req, resp)=>{
     
     user.create({auth_token: req.body.authToken,
         sid: req.body.sid,
-    phoneNumber: req.body.phoneNumber,
-    message: req.body.message}, (error, newData)=>{
-        if (error){
-            console.log(error);
-            } 
-        else {
-            console.log(newData);
-            
-            resp.redirect('/call');
-        }
+        phoneNumber: req.body.phoneNumber,
+        message: req.body.message}, (error, newData)=>{
+            if (error){
+                console.log(error);
+                } 
+            else {
+                console.log(newData);
+                
+                resp.redirect('/call');
+            }
     });
 });
 
 app.get('/call', (req,resp)=>{
     const accountSid = req.body.sid;
-const authToken = req.body.auth_token;
-const client = require('twilio')(accountSid, authToken);
+    const authToken = req.body.auth_token;
+    const client = require('twilio')(accountSid, authToken);
 
-client.messages(req.body.message)
+    client.messages(req.body.message)
       .fetch()
       .then(message => console.log(message.body));
     resp.redirect('/');
