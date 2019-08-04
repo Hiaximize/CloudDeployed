@@ -38,7 +38,7 @@ app.get('/new', (req, resp)=>{
 
 ///////////MONGO & MONGOOSE DEPENDENCIES//////////////////////
 const mongoose = require('mongoose');
-// const mongoURI = MONGODB_URI; // changed from mongo_URI
+const MONGODB_URI = process.env.MONGODB_URI; // changed from mongo_URI
 const db = mongoose.connection;
 const schema = mongoose.Schema;
 mongoose.connect(MONGODB_URI, {useNewUrlParser:true});
@@ -49,7 +49,7 @@ db.on('error', (error)=>{
 });
 
 db.on('connected', ()=>{
-    console.log("successfully connected to: ", mongoURI);
+    console.log("successfully connected to: ", MONGODB_URI);
 });
 
 db.on('disconnect', ()=>{
