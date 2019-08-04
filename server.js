@@ -21,7 +21,7 @@ const PORT = process.env.PORT || 3000;
 
 ///////////MONGO & MONGOOSE DEPENDENCIES//////////////////////
 const mongoose = require('mongoose');
-const MONGODB_URI = process.env.MONGODB_URI; // change to MONGODB_URI to use cloud Atlas && mongo_URI for mongodb
+const MONGODB_URI = process.env.mongoDB_URI; // change to MONGODB_URI to use cloud Atlas && mongo_URI for mongodb
 const db = mongoose.connection;
 const schema = mongoose.Schema;
 mongoose.connect(MONGODB_URI, {useNewUrlParser:true});
