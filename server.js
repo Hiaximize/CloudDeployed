@@ -48,7 +48,9 @@ app.get('/new', (req, resp)=>{
 
 
 // post goes here
-
+app.post('/', (req, resp)=>{
+    resp.redirect('/');
+})
 ////////////////////////
 
 app.get('/:id', (req, resp)=>{
