@@ -7,7 +7,11 @@
     <title>NEW</title>
 </head>
 <body>
-    NEW PAGE
-    <a href="/"><button>BACK</button></a>
+    <form action="/" method="POST">
+        <input type='text' name='auth_token' id='auth_token'>
+        <input type="text" name="sid" id="sid">
+        <input type="submit" id="submitButton">
+    </form>
+    <a href="/views/index.ejs"><button>back</button></a>
 </body>
 </html>
