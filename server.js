@@ -5,6 +5,7 @@ const methodOverride = require('method-override');
 const env = require('dotenv');
 env.config();
 const test = require('./models/characters.js');
+const newNumb = require('./models/newNumber.js');
 
 
 
@@ -36,7 +37,13 @@ db.on('connected', ()=>{
 db.on('disconnect', ()=>{
     console.log("mongod disconnected");
 });
-////////////////////////////////////////////////////////////
+
+
+///////////////////ROUTES/////////////////////////////////////////
+
+// function getMessage(){
+
+// }
 
 // index page
 app.get('/', (req, resp)=>{
@@ -48,8 +55,17 @@ app.get('/new', (req, resp)=>{
     resp.render('new.ejs');
 })
 
+
+// app.post('/new', (req, resp)=>{
+//     newNumb.create(req.body, (error, newNumber)=>{
+//         console.log(error);
+//     })
+//     console.log(newNumber);
+//     resp.redirect('/');
+// });
+
 app.get('/call', (req, resp)=>{
-    resp.send('You made your call');
+    resp.send(req.body);
 })
 
 // post goes here
@@ -58,14 +74,30 @@ app.post('/', (req, resp)=>{
         if(error){
             console.log(error);
         }
-        console.log(testData);
-    })
+        // insert api call here with data from form
+        // console.log();
+
+        const accountSid = req.body.sid;
+        const authToken = req.body.auth_token;
+        const client = require('twilio')(accountSid, authToken);
+
+        client.calls
+            .create({
+                url: 'http://demo.twilio.com/docs/voice.xml',
+                to: String(req.body.phoneNumber),
+                from: '+12028949849'
+            })
+            .then(call => console.log(call.sid));
+                console.log(testData);
+             });
     resp.redirect('/');
-})
-////////////////////////
+});
+
+///////////////////////////////////////////////////
 
 app.get('/:id', (req, resp)=>{
-    resp.send('id page');
+    test.
+    resp.render('show.ejs');
 })
 
 app.get('/:id/edit', (req, resp)=>{

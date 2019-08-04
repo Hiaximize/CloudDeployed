@@ -1,0 +1,18 @@
+*{
+    font-family: "Audiowide", cursive;
+}
+body{
+    background-image: url('https://ak9.picdn.net/shutterstock/videos/1030736249/thumb/1.jpg?ip=x480');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.options{
+    font-size: 20px;
+    border-radius: 4px;
+}
+#name{
+    margin-bottom: 5px;
+}
+#backButton{
+    border-radius: 4px;
+}

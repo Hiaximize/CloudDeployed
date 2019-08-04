@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="new.css" type="text/css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NEW</title>
 </head>
 <body>
-    <form action="/" method="POST">
-        <input type='text' placeholder="auth token" name='auth_token' id='auth_token'>
-        <input placeholder="sid" type="text" name="sid" id="sid">
-        <input type="submit" id="submitButton">
+    <h1>Add a phone number</h1>
+
+    <form action="/new" method="POST">
+        <input type="text" class="options" placeholder="name" name="name" id="name">
+        <input type="text" class="options" placeholder="phoneNumber" name="phoneNumber" id="phoneNumber">
+        <input type="submit" class="options" id="submitButton" value="Submit">
     </form>
-    <a href="/"><button>back</button></a>
+    
+    <a href="/" id="backButton"><button>back</button></a>
 </body>
 </html>

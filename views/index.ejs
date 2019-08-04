@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="main.css" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>INDEX</title>
 </head>
 <body>
-     <h1>Character Name:</h1> <!-- Add EJS here to pass in character Name -->
+     <h1>Make a robot call</h1>
 
-     <a href="/new"><button>NEW</button></a>
+  <form action="/" method="POST">
+      <input placeholder="sid" type="password" name="sid" id="sid"><br>
+      <input type='password' placeholder="auth token" name='auth_token' id='auth_token'><br>
+      
+      <input type="text" placeholder="Phone Number" name="phoneNumber" id="phoneNumber"><br>
+      <input type="text" placeholder="Message" name="message" id="message"><br>
+      <input type="submit" id="submitButton">
+  </form>
+  <a href="/show" id="showNumbers"><button>Show Numbers</button></a>
+  <div>
+      <a href="/new" id="new"><button>NEW</button></a>
+  </div>
+
+
+     
      <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="

@@ -1,0 +1,19 @@
+*{
+    font-family: "Audiowide", cursive;
+}
+body{
+    background-image: url('https://ak9.picdn.net/shutterstock/videos/1030736249/thumb/1.jpg?ip=x480');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#numberContainer{
+    height: 350px;
+    width: 300px;
+    background-color: white;
+    opacity: .5;
+    overflow-y: scroll;
+}
+#numberContainer h1{
+    text-align: center;
+    text-decoration: underline;
+}

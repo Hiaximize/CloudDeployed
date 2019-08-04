@@ -11,8 +11,11 @@ const Schema = mongoose.Schema;
 // module.exports = mongoose.model('ReplaceMe', ReplaceMe);
 
 const test = Schema (
-    {auth_token: String,
-    sid: String}
+    {auth_token: {type: String, required: true},
+    sid: {type: String, required: true},
+    phoneNumber: String,
+    message: String
+    }
 );
 
 module.exports = mongoose.model('test', test);

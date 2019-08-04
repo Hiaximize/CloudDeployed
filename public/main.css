@@ -1,0 +1,71 @@
+*{
+    font-family: 'Audiowide', cursive;
+}
+body{
+    background-image: url('https://ak9.picdn.net/shutterstock/videos/1030736249/thumb/1.jpg?ip=x480');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#auth_token{
+    width: 35%;
+    font-size: 20px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+#sid{
+    width: 35%;
+    font-size: 20px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+h1{
+    color: blue;
+    text-align: center;
+    font-size: 35px;
+}
+#submitButton{
+    font-size: 40px;
+    height: 80px;
+    display: inline-block;
+    border-radius: 4px;
+}
+#new{
+    display: inline-block;
+}
+
+#pageContainer{
+    display: block;
+    /* margin: 0 auto; */
+}
+#options{
+    display: block;
+}
+#phoneNumber{
+    display: block;
+    width: 50%;
+    height: 34px;
+    font-size: 24px;
+    border-radius: 4px;
+    text-align: center;
+}
+#message{
+    width: 50%;
+    height: 250px;
+    overflow-y: scroll;
+    margin: 5px auto;
+    border-radius: 4px;
+    font-size: 24px;
+    text-align: center;
+}
+.buttons{
+    width: 50%;
+}
+#call{
+    font-size: 40px;
+}
+
+@media (max-width: 600px){
+    body{
+        background-color: black;
+    }
+}
