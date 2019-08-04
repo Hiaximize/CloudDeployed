@@ -7,18 +7,6 @@ env.config();
 // const character = require('./models/characterId.js');
 
 
-
-// /////////////CODE FROM INTERNET//////////////////////
-// var http = require('http');
-
-// http.createServer(function (req, res) {
-//     res.writeHead(200, {'Content-Type': 'text/plain'});
-//     res.end('Hello World\n');
-// }).listen(8080, "0.0.0.0");
-// console.log('Server running at http://0.0.0.0:8080/');
-
-
-
 ///////////////////Middleware/////////////////////////
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
@@ -27,14 +15,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 const PORT = process.env.PORT || 3000;
 
-// index page
-app.get('/', (req, resp)=>{
-    resp.render('index.ejs');
-});
-
-app.get('/new', (req, resp)=>{
-    resp.send('new.ejs');
-})
 
 ///////////MONGO & MONGOOSE DEPENDENCIES//////////////////////
 const mongoose = require('mongoose');
@@ -56,6 +36,16 @@ db.on('disconnect', ()=>{
     console.log("mongod disconnected");
 });
 ////////////////////////////////////////////////////////////
+
+// index page
+app.get('/', (req, resp)=>{
+    resp.render('index.ejs');
+});
+
+app.get('/new', (req, resp)=>{
+    resp.send('new.ejs');
+})
+
 
 // post goes here
 
