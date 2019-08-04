@@ -41,6 +41,7 @@ db.on('disconnect', ()=>{
 // index page
 app.get('/', (req, resp)=>{
     resp.render('index.ejs');
+    console.log(req.body);
 });
 
 app.get('/new', (req, resp)=>{
@@ -52,8 +53,8 @@ app.get('/call', (req, resp)=>{
 })
 
 // post goes here
-app.post('/call', (req, resp)=>{
-    resp.redirect('/call');
+app.post('/', (req, resp)=>{
+    resp.redirect('/');
 })
 ////////////////////////
 
