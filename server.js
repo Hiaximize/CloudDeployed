@@ -37,24 +37,24 @@ app.get('/new', (req, resp)=>{
 })
 
 ///////////MONGO & MONGOOSE DEPENDENCIES//////////////////////
-const mongoose = require('mongoose');
-const mongoURI = MONGODB_URI;
-const db = mongoose.connection;
-const schema = mongoose.Schema;
-mongoose.connect(mongoURI, {useNewUrlParser:true});
-mongoose.Promise = global.Promise;
+// const mongoose = require('mongoose');
+// const mongoURI = MONGODB_URI; // changed from mongo_URI
+// const db = mongoose.connection;
+// const schema = mongoose.Schema;
+// mongoose.connect(mongoURI, {useNewUrlParser:true});
+// mongoose.Promise = global.Promise;
 
-db.on('error', (error)=>{
-    console.log(error.message + 'is Mongo not running?');
-});
+// db.on('error', (error)=>{
+//     console.log(error.message + 'is Mongo not running?');
+// });
 
-db.on('connected', ()=>{
-    console.log("successfully connected to: ", mongoURI);
-});
+// db.on('connected', ()=>{
+//     console.log("successfully connected to: ", mongoURI);
+// });
 
-db.on('disconnect', ()=>{
-    console.log("mongod disconnected");
-});
+// db.on('disconnect', ()=>{
+//     console.log("mongod disconnected");
+// });
 ////////////////////////////////////////////////////////////
 
 // post goes here
