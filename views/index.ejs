@@ -33,19 +33,26 @@
         <h1>Make a robot call</h1>
 
         <form id="callForm" action="/" method="POST">
-            <input placeholder="sid" type="password" name="sid" id="sid"><br>
-            <input type='password' placeholder="auth token" name='auth_token' id='auth_token'><br>
-            
+            <fieldset id="twilioAcctInfo">
+                <legend class="legendTitle">Twilio Acct Info</legend>
+                <input placeholder="sid" type="password" name="sid" id="sid"><br>
+                <input type='password' placeholder="auth token" name='auth_token' id='auth_token'>
+            </fieldset>
+            <br>
+            <fieldset id="numberAndNotes">
+                <legend class="legendTitle">Call Info</legend>
             <input type="text" placeholder="Phone Number" name="phoneNumber" id="phoneNumber"><br>
             <input type="text" placeholder="Note" name="note" id="message"><br>
             <h3>Call Options</h3>
-            Skynet <input name="skynet" type="checkbox"> Dont Spam <input name="dontSpam" type="checkbox">
+            Skynet <input name="skynet" type="checkbox"> For Spammers <input name="dontSpam" type="checkbox">
             Flood <input type="checkbox" name="loop"><br>
-            <input type="submit" id="submitButton">
+            <input type="submit" class="buttons" id="submitButton">
+            </fieldset>
         </form>
-    <a href="/show" id="showNumbers"><button>Show Numbers</button></a>
-        <div>
-            <a href="/new" id="new"><button>NEW</button></a>
+        <div id="show_newNewNumbers">
+            <a href="/show"><button class="buttons">Show Numbers</button></a>
+        
+            <a href="/new" id="new"><button class="buttons">NEW</button></a>
         </div>
     </div>
   </div>

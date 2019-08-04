@@ -13,8 +13,8 @@
             
             <ul>
                 <% for (var i = 0; i < numbers.length; i++) { %> 
-                    <li id="number">numbers[i].phoneNumber</li>
-                    <li id="message">numbers[i].note</li>
+                    <li id="number"><%=numbers[i].phoneNumber%></li>
+                    <li id="message"><%+numbers[i].message%></li>
                     <li>
                         <form action="/<%=numbers[i].id%>?_method=DELETE" method="POST"><input type="submit" value="DELETE" id="deleteEntry"></form>
                     </li>

@@ -15,4 +15,9 @@ body{
 }
 #backButton{
     border-radius: 4px;
+    font-size: 24px;
+    margin-top: 5px;
+}
+#submitButton{
+    font-size: 24px;
 }
