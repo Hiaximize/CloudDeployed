@@ -43,7 +43,7 @@ app.get('/', (req, resp)=>{
 });
 
 app.get('/new', (req, resp)=>{
-    resp.send('new.ejs');
+    resp.render('new.ejs');
 })
 
 
