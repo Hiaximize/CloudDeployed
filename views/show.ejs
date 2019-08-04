@@ -13,7 +13,7 @@
             
             <ul>
                 <% for (var i = 0; i < numbers.length; i++) { %> 
-                    <li id="number"><%=numbers[i].phoneNumber%></li>
+                    <a href="/<%=numbers[i].id%>/edit"><li id="number"><%=numbers[i].phoneNumber%></li></a>
                     <li id="message"><%=numbers[i].note%></li>
                     <li>
                         <form action="/<%=numbers[i].id%>?_method=DELETE" method="POST"><input type="submit" value="DELETE" id="deleteEntry"></form>

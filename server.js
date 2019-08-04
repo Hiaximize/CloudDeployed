@@ -71,12 +71,15 @@ app.get('/call', (req, resp)=>{
 // post goes here
 app.post('/', (req, resp)=>{
     test.create(req.body, (error, testData)=>{
+        if (req.body.phoneNumber.length < 7){               console.log("phoneNumber not long enough");
+        
+        }
         let callMessage;
         if(req.body.skynet == 'on'){
             req.body.skynet = true;
             callMessage = 'https://waterspout-bullfrog-1511.twil.io/assets/skynet.xml';
         }
-        else {
+        else if (req.body.skynet == 'off') {
             req.body.skynet = false;
         }
         if(req.body.dontSpam == 'on'){
@@ -84,7 +87,7 @@ app.post('/', (req, resp)=>{
             req.body.dontSpam = true;
             callMessage = 'https://waterspout-bullfrog-1511.twil.io/assets/dontBeASpammer.xml';
         }
-        else {
+        else if (req.body.dontSpam == 'on') {
             req.body.dontSpam = false;
         }
 
@@ -118,8 +121,10 @@ app.delete('/:id', (req, resp)=>{
 })
 
 app.get('/:id/edit', (req, resp)=>{
-    resp.render('edit.ejs');
-})
+    test.findById(req.params.id, (error, foundNumber)=>{
+    resp.render('edit.ejs', {numbers:foundNumber,index:req.params.id});
+    });
+});
 
 app.get('/:id', (req, resp)=>{
     test.find({}, (error, data)=>{
@@ -127,14 +132,17 @@ app.get('/:id', (req, resp)=>{
             console.log(error);
         }
         resp.render('show.ejs', {numbers:data});
-    })
+    });
     
-})
+});
 
 
 app.put('/:id', (req, resp)=>{
-    resp.send('update route');
-})
+    test.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error, updatedNumber)=>{
+    
+    resp.send(req.body);
+    })
+});
 
 ////////////////listen port///////////////////
 

@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>EDIT</title>
-</head>
+    <head>
+        <% include ./partials/head.ejs %>
+        <link href="/edit.css" type="text/css" rel="stylesheet">
+    </head>
 <body>
-    Edit entries
+    <div id="container">
+
+        <div id="formContainer">
+
+            
+                <fieldset id="phoneNumber">
+                    <legend class="legendTitle">Editing Notes For Phone Number</legend>
+                    <%= numbers.phoneNumber %>
+                </fieldset>
+                <br>
+            <form id="editNotes" action="/<%=numbers.id%>?_method=PUT" method="POST">
+                <fieldset id="notes">
+                    <legend class="legendTitle">New Notes</legend>
+                    <input type="text" id="notes" name="notes" value="<%=numbers.note%>">
+                <input type="submit" class="buttons" id="submitButton">
+                </fieldset>
+            </form>
+            
+        </div>
+    </div>
+     
+     <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src='/app.js'></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
