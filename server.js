@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const env = require('dotenv');
 env.config();
-// const character = require('./models/characterId.js');
+const test = require('./models/characters.js');
 
 
 
@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 3000;
 
 ///////////MONGO & MONGOOSE DEPENDENCIES//////////////////////
 const mongoose = require('mongoose');
-const MONGODB_URI = process.env.MONGODB_URI; // changed from mongo_URI
+const MONGODB_URI = process.env.MONGODB_URI; // change to MONGODB_URI to use cloud Atlas
 const db = mongoose.connection;
 const schema = mongoose.Schema;
 mongoose.connect(MONGODB_URI, {useNewUrlParser:true});
@@ -54,6 +54,12 @@ app.get('/call', (req, resp)=>{
 
 // post goes here
 app.post('/', (req, resp)=>{
+    test.create(req.body, (error, testData)=>{
+        if(error){
+            console.log(error);
+        }
+        console.log(testData);
+    })
     resp.redirect('/');
 })
 ////////////////////////
