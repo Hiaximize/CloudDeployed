@@ -7,6 +7,7 @@ env.config();
 // const character = require('./models/characterId.js');
 
 
+
 ///////////////////Middleware/////////////////////////
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
@@ -46,10 +47,13 @@ app.get('/new', (req, resp)=>{
     resp.render('new.ejs');
 })
 
+app.get('/call', (req, resp)=>{
+    resp.send('You made your call');
+})
 
 // post goes here
-app.post('/', (req, resp)=>{
-    resp.redirect('/');
+app.post('/call', (req, resp)=>{
+    resp.redirect('/call');
 })
 ////////////////////////
 
