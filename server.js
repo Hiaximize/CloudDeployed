@@ -38,7 +38,7 @@ app.get('/new', (req, resp)=>{
 
 ///////////MONGO & MONGOOSE DEPENDENCIES//////////////////////
 const mongoose = require('mongoose');
-const mongoURI = process.env.mongo_URI;
+const mongoURI = MONGODB_URI;
 const db = mongoose.connection;
 const schema = mongoose.Schema;
 mongoose.connect(mongoURI, {useNewUrlParser:true});
