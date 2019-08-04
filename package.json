@@ -1,8 +1,8 @@
-{"name": "mongo_atlas_FirstCluster",
+{
+  "name": "unit2projects",
   "engines": {
     "node": "12.4.0"
   },
-  "name": "unit2projects",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -10,12 +10,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "repository":{"type": "git", 
-                "url": "https://github.com/Hiaximize/Unit2Project"
-  },      
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hiaximize/Unit2Project"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.0.0",
     "ejs": "^2.6.2",
     "express": "^4.17.1",
     "method-override": "^3.0.0",

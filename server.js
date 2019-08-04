@@ -2,10 +2,25 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
+const env = require('dotenv');
+env.config();
 // const character = require('./models/characterId.js');
 
 
+
+// /////////////CODE FROM INTERNET//////////////////////
+// var http = require('http');
+
+// http.createServer(function (req, res) {
+//     res.writeHead(200, {'Content-Type': 'text/plain'});
+//     res.end('Hello World\n');
+// }).listen(8080, "0.0.0.0");
+// console.log('Server running at http://0.0.0.0:8080/');
+
+
+
 ///////////////////Middleware/////////////////////////
+app.use(express.static('public'));
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({extended: false}));
 app.use(bodyParser.urlencoded({extended: false}));
@@ -20,6 +35,27 @@ app.get('/', (req, resp)=>{
 app.get('/new', (req, resp)=>{
     resp.send('new');
 })
+
+///////////MONGO & MONGOOSE DEPENDENCIES//////////////////////
+const mongoose = require('mongoose');
+const mongoURI = process.env.mongo_URI;
+const db = mongoose.connection;
+const schema = mongoose.Schema;
+mongoose.connect(mongoURI, {useNewUrlParser:true});
+mongoose.Promise = global.Promise;
+
+db.on('error', (error)=>{
+    console.log(error.message + 'is Mongo not running?');
+});
+
+db.on('connected', ()=>{
+    console.log("successfully connected to: ", mongoURI);
+});
+
+db.on('disconnect', ()=>{
+    console.log("mongod disconnected");
+});
+////////////////////////////////////////////////////////////
 
 // post goes here
 

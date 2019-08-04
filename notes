@@ -1,0 +1,9 @@
+create env variable on heroku in the settings.
+
+jquery file
+curl -X GET --header 'Accept: application/json' --header "authorization: Bearer <API token>" 'https://api.clashofclans.com/v1/players/%23dfdsa'
+
+{ 
+    header(??s): {accept: "application/json", authorization: "Bearer <API KEY>"},
+    
+}
