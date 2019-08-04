@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const env = require('dotenv');
 env.config();
-const callForm = require('./models/callForm.js');
+const test = require('./models/test.js');
 const newNumb = require('./models/newNumber.js');
 
 
@@ -70,7 +70,7 @@ app.get('/call', (req, resp)=>{
 
 // post goes here
 app.post('/', (req, resp)=>{
-    callForm.create(req.body, (error, callFormData)=>{
+    test.create(req.body, (error, testData)=>{
         let callMessage;
         if(req.body.skynet == 'on'){
             req.body.skynet = true;
@@ -103,7 +103,7 @@ app.post('/', (req, resp)=>{
                 from: '+12028949849'
             })
             .then(call => console.log(call.sid));
-                console.log(callFormData);
+                console.log(testData);
              });
     resp.redirect('/');
 });
@@ -111,7 +111,7 @@ app.post('/', (req, resp)=>{
 ///////////////////////////////////////////////////
 // delete needs some work..not currently deleting
 app.delete('/:id', (req, resp)=>{
-    callForm.findByIdAndRemove(req.params.id, (error, deletedNumber)=>{
+    test.findByIdAndRemove(req.params.id, (error, deletedNumber)=>{
         console.log(deletedNumber);
         resp.redirect('/show');
     })
@@ -122,7 +122,7 @@ app.get('/:id/edit', (req, resp)=>{
 })
 
 app.get('/:id', (req, resp)=>{
-    callForm.find({}, (error, data)=>{
+    test.find({}, (error, data)=>{
         if(error){
             console.log(error);
         }

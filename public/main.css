@@ -125,6 +125,12 @@ fieldset{
     }
 } */
 
+@media(min-height: 1216px){
+    body{
+        background-image: none;
+    }
+}
+
 @media(max-width: 2337px){
     body{
         /* background-image: none; */
