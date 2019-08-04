@@ -1,0 +1,7 @@
+<Response>
+<Say voice="alice">
+    I'm reaching out looking for applicants who want to register for the skynet program early, does this sound like something you would be interested in?
+    If so, give us a call back
+    <Pause length="1"/>
+</Say>
+</Response>

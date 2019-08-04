@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+    <head>
+    <% include ./partials/head.ejs %>
     <link href="show.css" type="text/css" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+    </head>
 <body>
 
-    <div id="container">
-
+    <div id="pageContainer">
+        <a href="/" id="backButton"><button>BACK</button></a>
+        <h1>Phone Numbers</h1>
         <div id="numberContainer">
-            <h1>Phone Numbers</h1>
+            
+            <ul>
+                <% for (var i = 0; i < numbers.length; i++) { %> 
+                    <li id="number">numbers[i].phoneNumber</li>
+                    <li id="message">numbers[i].note</li>
+                    <li>
+                        <form action="/<%=numbers[i].id%>?_method=DELETE" method="POST"><input type="submit" value="DELETE" id="deleteEntry"></form>
+                    </li>
+                    <hr>
+                <% } %>
+            </ul>
         </div>
 
     </div>

@@ -6,9 +6,12 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+#pageContainer{
+    width: 50%;
+}
 #numberContainer{
     height: 350px;
-    width: 300px;
+    width: 100%;
     background-color: white;
     opacity: .5;
     overflow-y: scroll;
@@ -16,4 +19,13 @@ body{
 #numberContainer h1{
     text-align: center;
     text-decoration: underline;
+}
+li{
+    list-style: none;
+}
+#number{
+    color: black;
+}
+#message{
+    color: red;
 }

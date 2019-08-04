@@ -1,0 +1,7 @@
+<Response>
+<Say voice="alice">
+    Dont be a spammer, You have been determined to be a spammer, Dont be a spammer, We are inside your phone lines
+</Say>
+<Play>https://api.twilio.com/cowbell.mp3</Play>
+</Response>
+
