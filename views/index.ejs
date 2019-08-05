@@ -30,7 +30,7 @@
 
     <div id="formContainer">
 
-        <h1>Make a robot call</h1>
+        <h1>Make a <br>robot call</h1>
 
         <form id="callForm" action="/" method="POST">
             <fieldset id="twilioAcctInfo">
@@ -41,21 +41,28 @@
             <br>
             <fieldset id="numberAndNotes">
                 <legend class="legendTitle">Call Info</legend>
-            <input type="text" placeholder="Phone Number" name="phoneNumber" id="phoneNumber"><br>
-            <input type="text" placeholder="Note" name="note" id="message"><br>
-            <h3>Call Options</h3>
-            Skynet <input name="skynet" type="checkbox"> For Spammers <input name="dontSpam" type="checkbox">
-            Flood <input type="checkbox" name="loop"><br>
-            <input type="submit" class="buttons" id="submitButton">
+                <input type="text" placeholder="Phone Number" name="phoneNumber" id="phoneNumber"><br>
+                <textarea rows="5" placeholder="Note" name="note" class="message" id="note"></textarea><br>
             </fieldset>
+            
+            <fieldset id="callOptions">
+            <legend> Call Options</legend>
+             <input name="skynet" type="checkbox"> Skynet<input name="dontSpam" type="checkbox"> Spammer Revenge
+            Flood <input type="checkbox" name="loop">
+            </fieldset>
+            <br>
+            <input type="submit" class="buttons" id="submitButton">
+            
         </form>
-        <div id="show_newNewNumbers">
-            <a href="/show"><button class="buttons">Show Numbers</button></a>
-        
-            <a href="/new" id="new"><button class="buttons">NEW</button></a>
-        </div>
     </div>
+    
   </div>
+
+  <div id="show_newNumbers">
+        <a href="/show"><button class="buttons">Show Numbers</button></a>
+    
+        <a href="/new" id="new"><button class="buttons">NEW</button></a>
+    </div>
      
      <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
