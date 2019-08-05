@@ -32,7 +32,7 @@
 
     <h1 class="mobile">Make A Robot Call</h1>
 
-        <h1>Make a <br>robot call</h1>
+        <h1>Make a robot call</h1>
 
         <form id="callForm" action="/" method="POST">
             <fieldset id="twilioAcctInfo">
@@ -44,7 +44,7 @@
             <fieldset id="numberAndNotes">
                 <legend class="legendTitle">Call Info</legend>
                 <input type="text" placeholder="Phone #" name="phoneNumber" id="phoneNumber"><br>
-                <textarea rows="5" placeholder="Note" name="note" class="message" id="note"></textarea><br>
+                <textarea rows="10" placeholder="Note" name="note" class="message" id="note"></textarea><br>
             </fieldset>
             
             <fieldset class="legendTitle" id="callOptions">
@@ -58,17 +58,16 @@
             
             </fieldset>
             <br>
-            <input type="submit" class="buttons" id="submitButton">
+            <input type="submit" class="buttons" id="submitButton" value="CALL">
             
         </form>
+        <div id="show_newNumbers">
+                <a href="/show"><button id="showNumbers" class="buttons">Show Numbers</button></a>
+          </div>
     </div>
     
   </div>
 
-  <div id="show_newNumbers">
-        <a href="/show"><button class="buttons">Show Numbers</button></a>
-    
-        <a href="/new" id="new"><button class="buttons">NEW</button></a>
     </div>
      
      <script

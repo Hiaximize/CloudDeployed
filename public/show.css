@@ -1,10 +1,24 @@
 *{
     font-family: "Audiowide", cursive;
 }
+
 body{
     background-image: url('https://ak9.picdn.net/shutterstock/videos/1030736249/thumb/1.jpg?ip=x480');
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+h1{
+    text-align: center;
+    font-size: 80px;
+}
+#back{
+    background-color: white;
+    margin-bottom: 10px;
+    font-size: 25px;
+    border-radius: 2px;
+    display: inline-block;
+    margin-left: 2px;
 }
 #pageContainer{
     width: 50%;
@@ -26,12 +40,29 @@ li{
 }
 #number{
     color: black;
+    font-size: 30px;
+    text-align: center;
 }
 #message{
+    font-size: 40px;
+    margin-top: 18px;
     color: red;
+    text-align: center;
 }
+
+#deleteEntry{
+    font-size: 15px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+    margin-top: 18px;
+}
+
 @media(max-width: 1024px){
-    
+    #backbutton{
+        display: none;
+    }
     #pageContainer{
         width: 90%;
         margin: 0 auto;
@@ -86,7 +117,9 @@ li{
 
 
 @media(max-width: 360px){
-    
+    #backButton{
+        display: none;
+    }
     #pageContainer{
         width: 90%;
         margin: 0 auto;
@@ -135,7 +168,9 @@ li{
 }
 
 @media(max-width: 375px){
-    
+    #backButton{
+        display: none;
+    }
     #pageContainer{
         width: 90%;
         margin: 0 auto;
@@ -185,7 +220,7 @@ li{
 }
 
 @media(max-width: 414px){
-    
+    #backButton{display:none;}
     #pageContainer{
         width: 90%;
         margin: 0 auto;
@@ -236,7 +271,9 @@ li{
 }
 
 @media(max-width: 768px){
-    
+    #backbutton{
+        display: none;
+    }
     #pageContainer{
         width: 90%;
         margin: 0 auto;
@@ -287,7 +324,9 @@ li{
 }
 
 @media(max-width: 320px){
-    
+    #backButton{
+        display: none;
+    }
     #pageContainer{
         width: 90%;
         margin: 0 auto;
