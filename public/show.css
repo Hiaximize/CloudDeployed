@@ -59,6 +59,7 @@ li{
     margin-top: 18px;
 }
 
+/* ipad pro */
 @media(max-width: 1024px){
     #backbutton{
         display: none;
@@ -115,7 +116,7 @@ li{
 }
 
 
-
+/* galaxy s5 */
 @media(max-width: 360px){
     #backButton{
         display: none;
@@ -167,6 +168,7 @@ li{
     
 }
 
+/* iphone 6/7/8 iphoneX */
 @media(max-width: 375px){
     #backButton{
         display: none;
@@ -219,6 +221,7 @@ li{
     
 }
 
+/* iphone 6/7/8 plus */
 @media(max-width: 414px){
     #backButton{display:none;}
     #pageContainer{
@@ -270,6 +273,7 @@ li{
     
 }
 
+/* ipad */
 @media(max-width: 768px){
     #backbutton{
         display: none;
@@ -323,6 +327,7 @@ li{
     
 }
 
+/* iphone 5/se */
 @media(max-width: 320px){
     #backButton{
         display: none;
@@ -374,3 +379,5 @@ li{
     }
     
 }
+
+/* need one for 411 *2 */
