@@ -11,16 +11,16 @@
 
             
                 <fieldset id="phoneNumber">
-                    <legend class="legendTitle">Editing Notes For Phone Number</legend>
-                    <%= numbers.phoneNumber %>
+                    <legend class="legendTitle">Editing Notes For </legend>
+                    <h1><%= numbers.phoneNumber %> </h1>
                 </fieldset>
                 <br>
             <form id="editNotes" action="/<%=numbers.id%>?_method=PUT" method="POST">
                 <fieldset id="notesContainer">
-                    <legend class="legendTitle">New Notes</legend>
-                    <input type="text" id="notes" name="note" value="<%=numbers.note%>">
-                <input type="submit" class="buttons" id="submitButton">
-                </fieldset>
+                        <legend class="legendTitle">New Notes</legend>
+                        <input type="text" id="note" name="note" value="<%=numbers.note%>">
+                    <input type="submit" class="buttons" id="submitButton">
+                    </fieldset>
             </form>
             
         </div>

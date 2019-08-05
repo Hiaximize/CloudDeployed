@@ -30,6 +30,8 @@
 
     <div id="formContainer">
 
+    <h1 class="mobile">Make A Robot Call</h1>
+
         <h1>Make a <br>robot call</h1>
 
         <form id="callForm" action="/" method="POST">
@@ -41,14 +43,19 @@
             <br>
             <fieldset id="numberAndNotes">
                 <legend class="legendTitle">Call Info</legend>
-                <input type="text" placeholder="Phone Number" name="phoneNumber" id="phoneNumber"><br>
+                <input type="text" placeholder="Phone #" name="phoneNumber" id="phoneNumber"><br>
                 <textarea rows="5" placeholder="Note" name="note" class="message" id="note"></textarea><br>
             </fieldset>
             
-            <fieldset id="callOptions">
+            <fieldset class="legendTitle" id="callOptions">
             <legend> Call Options</legend>
-             <input name="skynet" type="checkbox"> Skynet<input name="dontSpam" type="checkbox"> Spammer Revenge
-            Flood <input type="checkbox" name="loop">
+            
+            
+             <input name="skynet" type="checkbox">skynet <br>
+             <input name="dontSpam" type="checkbox">Spammer Revenge <br>
+             
+             <input type="checkbox" name="loop">Flood
+            
             </fieldset>
             <br>
             <input type="submit" class="buttons" id="submitButton">

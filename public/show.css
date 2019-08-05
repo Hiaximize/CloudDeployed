@@ -15,6 +15,7 @@ body{
     background-color: white;
     opacity: .5;
     overflow-y: scroll;
+    border-radius: 5px;
 }
 #numberContainer h1{
     text-align: center;
@@ -28,4 +29,309 @@ li{
 }
 #message{
     color: red;
+}
+@media(max-width: 1024px){
+    
+    #pageContainer{
+        width: 90%;
+        margin: 0 auto;
+    }
+    #back{
+        background-color: white;
+        margin-bottom: 25px;
+        font-size: 40px;
+        border-radius: 2px;
+        display: inline-block;
+    }
+    #numberContainer{
+        height: 1000px;
+    }
+    h1{
+        font-size: 65px;
+        color: white;
+        text-align: center;
+    }
+    .buttons{
+        font-size: 24px;
+        width: 100%;
+        margin: 6px 0;
+        background-color: red;
+    }
+    #number{
+        font-size: 50px;
+        text-align: center;
+    }
+    #deleteEntry{
+        font-size: 30px;
+        background-color: red;
+        color: white;
+        text-align: center;
+        border-radius: 2px;
+        margin-top: 35px;
+    }
+    #message{
+        font-size: 60px;
+        margin-top: 25px;
+        text-align: center;
+    }
+    body{
+        background-image: none;
+        background-color: black;
+        opacity: .7;
+        color: white;
+    }
+    
+}
+
+
+
+@media(max-width: 360px){
+    
+    #pageContainer{
+        width: 90%;
+        margin: 0 auto;
+    }
+    #back{
+        background-color: white;
+        margin-bottom: 10px;
+        font-size: 20px;
+        border-radius: 2px;
+        display: inline-block;
+    }
+    
+    h1{
+        font-size: 40px;
+        color: white;
+        text-align: center;
+    }
+    .buttons{
+        font-size: 24px;
+        width: 100%;
+        margin: 6px 0;
+        background-color: red;
+    }
+    #number{
+        font-size: 24px;
+    }
+    #deleteEntry{
+        font-size: 15px;
+        background-color: red;
+        color: white;
+        text-align: center;
+        border-radius: 2px;
+        margin-top: 18px;
+    }
+    #message{
+        font-size: 22px;
+        margin-top: 18px;
+    }
+    body{
+        background-image: none;
+        background-color: black;
+        opacity: .7;
+        color: white;
+    }
+    
+}
+
+@media(max-width: 375px){
+    
+    #pageContainer{
+        width: 90%;
+        margin: 0 auto;
+    }
+    #back{
+        background-color: white;
+        margin-bottom: 10px;
+        font-size: 20px;
+        border-radius: 2px;
+        display: inline-block;
+    }
+    
+    h1{
+        font-size: 40px;
+        color: white;
+        text-align: center;
+    }
+    .buttons{
+        font-size: 24px;
+        width: 100%;
+        margin: 6px 0;
+        background-color: red;
+    }
+    #number{
+        font-size: 24px;
+    }
+    #deleteEntry{
+        font-size: 15px;
+        background-color: red;
+        color: white;
+        text-align: center;
+        border-radius: 2px;
+        margin-top: 18px;
+    }
+    #message{
+        font-size: 22px;
+        margin-top: 18px;
+        padding-right: 5px;
+    }
+    body{
+        background-image: none;
+        background-color: black;
+        opacity: .7;
+        color: white;
+    }
+    
+}
+
+@media(max-width: 414px){
+    
+    #pageContainer{
+        width: 90%;
+        margin: 0 auto;
+    }
+    #back{
+        background-color: white;
+        margin-bottom: 10px;
+        font-size: 20px;
+        border-radius: 2px;
+        display: inline-block;
+    }
+    #numberContainer{
+        height: 480px;
+    }
+    h1{
+        font-size: 40px;
+        color: white;
+        text-align: center;
+    }
+    .buttons{
+        font-size: 24px;
+        width: 100%;
+        margin: 6px 0;
+        background-color: red;
+    }
+    #number{
+        font-size: 24px;
+    }
+    #deleteEntry{
+        font-size: 15px;
+        background-color: red;
+        color: white;
+        text-align: center;
+        border-radius: 2px;
+        margin-top: 18px;
+    }
+    #message{
+        font-size: 22px;
+        margin-top: 18px;
+    }
+    body{
+        background-image: none;
+        background-color: black;
+        opacity: .7;
+        color: white;
+    }
+    
+}
+
+@media(max-width: 768px){
+    
+    #pageContainer{
+        width: 90%;
+        margin: 0 auto;
+    }
+    #back{
+        background-color: white;
+        margin-bottom: 10px;
+        font-size: 20px;
+        border-radius: 2px;
+        display: inline-block;
+    }
+    #numberContainer{
+        height: 700px;
+    }
+    h1{
+        font-size: 40px;
+        color: white;
+        text-align: center;
+    }
+    .buttons{
+        font-size: 24px;
+        width: 100%;
+        margin: 6px 0;
+        background-color: red;
+    }
+    #number{
+        font-size: 24px;
+    }
+    #deleteEntry{
+        font-size: 15px;
+        background-color: red;
+        color: white;
+        text-align: center;
+        border-radius: 2px;
+        margin-top: 18px;
+    }
+    #message{
+        font-size: 22px;
+        margin-top: 18px;
+    }
+    body{
+        background-image: none;
+        background-color: black;
+        opacity: .7;
+        color: white;
+    }
+    
+}
+
+@media(max-width: 320px){
+    
+    #pageContainer{
+        width: 90%;
+        margin: 0 auto;
+    }
+    #back{
+        background-color: white;
+        margin-bottom: 10px;
+        font-size: 20px;
+        border-radius: 2px;
+        display: inline-block;
+    }
+    
+    h1{
+        font-size: 40px;
+        color: white;
+        text-align: center;
+    }
+    .buttons{
+        font-size: 24px;
+        width: 100%;
+        margin: 6px 0;
+        background-color: red;
+    }
+    #number{
+        font-size: 24px;
+    }
+    #deleteEntry{
+        font-size: 15px;
+        background-color: red;
+        color: white;
+        text-align: center;
+        border-radius: 2px;
+        margin-top: 18px;
+    }
+    #message{
+        font-size: 22px;
+        margin-top: 18px;
+        padding-right: 10px;
+    }
+    body{
+        background-image: none;
+        background-color: black;
+        opacity: .7;
+        color: white;
+    }
+    
 }

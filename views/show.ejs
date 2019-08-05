@@ -8,7 +8,8 @@
 
     <div id="pageContainer">
         <a href="/" id="backButton"><button>BACK</button></a>
-        <h1>Phone Numbers</h1>
+        <h1>Messages</h1>
+        <a href="/"><button id="back">BACK</button></a>
         <div id="numberContainer">
             
             <ul>
@@ -17,6 +18,7 @@
                     <li id="message"><%=numbers[i].note%></li>
                     <li>
                         <form action="/<%=numbers[i].id%>?_method=DELETE" method="POST"><input type="submit" value="DELETE" id="deleteEntry"></form>
+
                     </li>
                     <hr>
                 <% } %>

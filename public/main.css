@@ -6,6 +6,9 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.mobile{
+    display: none;
+}
 #auth_token{
     width: 100%;
     font-size: 20px;
@@ -28,6 +31,7 @@ h1{
     width: 100%;
     border-radius: 4px;
 }
+
 #submitButton{
     font-size: 15px;
     height: 100px;
@@ -114,10 +118,61 @@ fieldset{
     font-size: 40px;
 }
 
+@media(max-width: 320px){
+    
+    #container{
+        width: 100%;
+    }
+    input[type="checkbox"]{
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+    
+    h1{
+        font-size: 40px;
+        color: white;
+    }
+    .buttons{
+        font-size: 24px;
+        width: 100%;
+        margin: 6px 0;
+        background-color: red;
+    }
+    #submitButton{
+        width: 100%;
+        font-size: 40px;
+        background-color: green;
+    }
+    #show_newNumbers{
+        width: 100%;
+    }
+    fieldset{
+        border: 1px solid white;
+        opacity: .9;
+        font-size: 24px;
+    }
+    body{
+        background-image: none;
+        background-color: black;
+        opacity: .7;
+        color: white;
+    }
+    #callOptions{
+        display:block;
+        font-size: 20px;
+    }
+}
+
 @media(max-width: 411px){
     
     #container{
         width: 100%;
+    }
+    input[type="checkbox"]{
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
     }
     h1{
         font-size: 40px;
@@ -148,14 +203,23 @@ fieldset{
         opacity: .7;
         color: white;
     }
+    #callOptions{
+        display:block;
+        font-size: 22px;
+    }
 }
 
 @media(max-width: 414px){
     #container{
         width: 100%;
     }
+    input[type="checkbox"]{
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
     h1{
-        font-size: 40px;
+        font-size: 30px;
         color: white;
     }
     .buttons{
@@ -168,6 +232,120 @@ fieldset{
         width: 100%;
         font-size: 40px;
         background-color: green;
+    }
+    #show_newNumbers{
+        width: 100%;
+    }
+    fieldset{
+        border: 1px solid white;
+        opacity: .9;
+        font-size: 24px;
+    }
+    body{
+        background-image: none;
+        background-color: black;
+        opacity: .7;
+        color: white;
+    }
+}
+
+@media(max-width: 768px){
+    #container{
+        width: 100%;
+    }
+    .legendTitle{
+        font-size: 35px;
+    }
+    input[type="checkbox"]{
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+    h1{
+        display: none;
+    }
+    .mobile{
+        font-size: 70px;
+        color: white;
+        display: block;
+    }
+    .buttons{
+        font-size: 40px;
+        width: 100%;
+        margin: 6px 0;
+        background-color: red;
+        border-radius: 8px;
+    }
+    #submitButton{
+        width: 100%;
+        font-size: 40px;
+        background-color: green;
+    }
+    #callOptions input{
+        margin-left: 30px;
+    }
+    #show_newNumbers{
+        width: 100%;
+    }
+    fieldset{
+        border: 1px solid white;
+        opacity: .9;
+        font-size: 24px;
+    }
+    body{
+        background-image: none;
+        background-color: black;
+        opacity: .7;
+        color: white;
+    }
+}
+
+@media(max-width: 1024px){
+    #container{
+        width: 100%;
+    }
+    .legendTitle{
+        font-size: 45px;
+    }
+    input[type="checkbox"]{
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+    }
+    h1{
+        display: none;
+    }#sid{
+        font-size: 40px;
+    }
+    #auth_token{
+        font-size: 40px;
+    }
+    #phoneNumber{
+        font-size: 50px;
+        height: 100px;
+    }
+    #note{
+        font-size: 40px;
+    }
+    .mobile{
+        font-size: 70px;
+        color: white;
+        display: block;
+    }
+    .buttons{
+        font-size: 40px;
+        width: 100%;
+        margin: 6px 0;
+        background-color: red;
+        border-radius: 8px;
+    }
+    #submitButton{
+        width: 100%;
+        font-size: 40px;
+        background-color: green;
+    }
+    #callOptions input{
+        margin-left: 30px;
     }
     #show_newNumbers{
         width: 100%;
