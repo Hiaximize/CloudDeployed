@@ -18,7 +18,8 @@
             <form id="editNotes" action="/<%=numbers.id%>?_method=PUT" method="POST">
                 <fieldset id="notesContainer">
                         <legend class="legendTitle">New Notes</legend>
-                        <input type="text" id="note" name="note" value="<%=numbers.note%>">
+                        <textarea rows="10" name="note" class="message" id="note"><%=numbers.note%></textarea><br>
+                    <a href="/show"><button class="buttons" id="back">BACK</button></a>
                     <input type="submit" class="buttons" id="submitButton">
                     </fieldset>
             </form>
