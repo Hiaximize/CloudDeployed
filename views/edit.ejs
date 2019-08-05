@@ -16,9 +16,9 @@
                 </fieldset>
                 <br>
             <form id="editNotes" action="/<%=numbers.id%>?_method=PUT" method="POST">
-                <fieldset id="notes">
+                <fieldset id="notesContainer">
                     <legend class="legendTitle">New Notes</legend>
-                    <input type="text" id="notes" name="notes" value="<%=numbers.note%>">
+                    <input type="text" id="notes" name="note" value="<%=numbers.note%>">
                 <input type="submit" class="buttons" id="submitButton">
                 </fieldset>
             </form>

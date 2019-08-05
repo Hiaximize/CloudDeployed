@@ -140,7 +140,7 @@ app.get('/:id', (req, resp)=>{
 app.put('/:id', (req, resp)=>{
     test.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error, updatedNumber)=>{
     
-    resp.send(req.body);
+    resp.redirect('/show');
     })
 });
 
