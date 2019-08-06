@@ -8,9 +8,9 @@ const test = Schema (
     sid: {type: String, required: true},
     phoneNumber: {type: Number, required: true, min:1000000000, max:9999999999},
     note: String,
-    skynet: Boolean,
-    flood: Boolean,
-    dontSpam: Boolean
+    skynet: String,
+    flood: String,
+    dontSpam: String
     }
 );
 
