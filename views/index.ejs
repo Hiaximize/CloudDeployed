@@ -11,7 +11,12 @@
         <div id="modal">
 
             <div id="modalTextbox">
+                
                 <h2>Call a friend or Call that annoying spammer</h2>
+
+                <p>DISCLAIMER: DO NOT USE THIS PLATFORM FOR ANY ILLEGAL PURPOSES. YOUR SID IS TIED TO YOUR ACCOUNT
+                </p>
+
                 <p>Tired of those annoying spammers trying to steal your identity?
                     Ever wanted to get back at them? Well now you can. This site makes 
                     it easier than ever to get them back. What about a friend? Make prank robot calls
@@ -37,8 +42,9 @@
         <form id="callForm" action="/" method="POST">
             <fieldset id="twilioAcctInfo">
                 <legend class="legendTitle">Twilio Acct Info</legend>
-                <input placeholder="sid" type="password" name="sid" id="sid"><br>
-                <input type='password' placeholder="auth token" name='auth_token' id='auth_token'>
+                <input placeholder="sid" type="password" name="sid" class="twilioAccountInfo"><br>
+                <input type="password" placeholder="auth token" name="auth_token" class="twilioAccountInfo">
+                <input type="text" placeholder="Twilio #" name="twilioNumber" class="twilioAccountInfo">
             </fieldset>
             <br>
             <fieldset id="numberAndNotes">
@@ -54,7 +60,7 @@
              <input name="skynet" type="checkbox">skynet <br>
              <input name="dontSpam" type="checkbox">Spammer Revenge <br>
 
-             <input type="checkbox" name="kylesMom">Kyles Mom (Explicit)
+             <input type="checkbox" name="kylesMom">Kyles Mom (Explicit) <br>
              
              <input type="checkbox" name="loop">Flood
             

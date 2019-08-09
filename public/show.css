@@ -24,10 +24,9 @@ h1{
     width: 50%;
 }
 #numberContainer{
-    height: 350px;
+    height: 500px;
     width: 100%;
     background-color: white;
-    opacity: .5;
     overflow-y: scroll;
     border-radius: 5px;
 }
@@ -120,6 +119,9 @@ li{
 @media(max-width: 360px){
     #backButton{
         display: none;
+    }
+    #numberContainer{
+        height: 250px;
     }
     #pageContainer{
         width: 90%;
@@ -290,7 +292,7 @@ li{
         display: inline-block;
     }
     #numberContainer{
-        height: 700px;
+        height: 720px;
     }
     h1{
         font-size: 40px;
@@ -304,10 +306,10 @@ li{
         background-color: red;
     }
     #number{
-        font-size: 24px;
+        font-size: 32px;
     }
     #deleteEntry{
-        font-size: 15px;
+        font-size: 22px;
         background-color: red;
         color: white;
         text-align: center;
@@ -315,13 +317,13 @@ li{
         margin-top: 18px;
     }
     #message{
-        font-size: 22px;
+        font-size: 30px;
         margin-top: 18px;
+        letter-spacing: 2px;
     }
     body{
         background-image: none;
         background-color: black;
-        opacity: .7;
         color: white;
     }
     
@@ -380,4 +382,3 @@ li{
     
 }
 
-/* need one for 411 *2 */

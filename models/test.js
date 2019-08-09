@@ -11,7 +11,7 @@ const test = Schema (
     skynet: String,
     flood: String,
     dontSpam: String
-    }
+    }, {timestamp: true}
 );
 
 module.exports = mongoose.model('test', test);

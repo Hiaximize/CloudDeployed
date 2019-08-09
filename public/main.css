@@ -17,15 +17,9 @@ input[type='checkbox']{
 .mobile{
     display: none;
 }
-#auth_token{
+.twilioAccountInfo{
     width: 100%;
-    font-size: 20px;
-    border-radius: 4px;
-    margin-bottom: 5px;
-}
-#sid{
-    width: 100%;
-    font-size: 20px;
+    font-size: 28px;
     border-radius: 4px;
     margin-bottom: 5px;
 }
@@ -171,7 +165,7 @@ fieldset{
     }
     #callOptions{
         display:block;
-        font-size: 20px;
+        font-size: 15px;
     }
 }
 

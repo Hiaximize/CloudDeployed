@@ -5,9 +5,6 @@ const methodOverride = require('method-override');
 const env = require('dotenv');
 env.config();
 const test = require('./models/test.js');
-// const newNumb = require('./models/newNumber.js');
-
-
 
 
 ///////////////////Middleware/////////////////////////
@@ -51,6 +48,7 @@ app.get('/', (req, resp)=>{
 // post goes here
 app.post('/', (req, resp)=>{
     test.create(req.body, (error, testData)=>{
+        
         if (req.body.phoneNumber.length < 7){               console.log("phoneNumber not long enough");
         }
         let callMessage;
@@ -76,22 +74,24 @@ app.post('/', (req, resp)=>{
             console.log(error);
         }             
 
-        // API Call to Twilio
-        const accountSid = req.body.sid;
-        const authToken = req.body.auth_token;
-        const client = require('twilio')(accountSid, authToken);
+        
+    
+            const accountSid = req.body.sid;
+            const authToken = req.body.auth_token;
+            const client = require('twilio')(accountSid, authToken);
 
         client.calls
             .create({
                url: String(callMessage),
                 to: String(req.body.phoneNumber),
-                from: '+12028949811'
+                from: String(req.body.twilioNumber)
             })
             .then(call => console.log(call.sid));
                 console.log(testData);
        
         
             resp.redirect('/');
+        
     })      
 });
 
